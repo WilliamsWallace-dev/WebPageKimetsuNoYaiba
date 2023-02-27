@@ -172,11 +172,35 @@ $container-s: 540px;
   left: 0;
   overflow: hidden;
   z-index: -999;
+
+  &::after{
+    content: "";
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(306.48deg, #020000 22.12%, #020000 22.13%, rgba(38, 4, 4, 0.72) 50.78%, #020000 80.19%);
+  
+  }
+}
+
+.video{
+  position: absolute;
+  top: 0;
+  left: -250px;
 }
 
 //Main 
 .main { 
-  padding: 36px 24px;
+  height: 80%;
+  padding: 0px 24px 36px 24px;
+
+  overflow: hidden;
 }
 
 // .hero{
@@ -186,4 +210,43 @@ $container-s: 540px;
 .logo-hero{
   max-width: 320px;
   transform: translate(5%,20%);
+}
+
+
+.character-hero{
+  position: relative;
+  // background-color: white;
+
+  width: 100%;
+
+  transform: translate(-13%,6%);
+
+}
+
+.character-2{
+  position: absolute;
+  left: 0;
+  top: -25px;
+
+  width: 110%;
+}
+
+.character-3{
+  position: absolute;
+  left: 0;
+  top: 30px;
+
+  width: 115%;
+}
+
+.character-1{
+  animation: character-opacity-1 20s ease infinite alternate both;
+}
+
+.character-2{
+  animation: character-opacity-2 20s ease infinite alternate both;
+}
+
+.character-3{
+  animation: character-opacity-3 20s ease infinite alternate both;
 }

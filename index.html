@@ -15,7 +15,7 @@
     <!-- //SVGInject  -->
     <script src="js/svg-inject.min.js"></script>
 </head>
-<body>
+<body class="">
     <header class="header">
         <nav class="navbar-desktop">
             <div class="flex-center">
@@ -25,19 +25,26 @@
                 <ul class="nav-menu flex-center ">
                     <li class="menu-item mr-2"><a href="#">HOME</a></li>
                     <li class="menu-item mr-2"><a href="#">STORY</a></li>
-                    <li class="menu-item mr-2"><a href="#">WALLPAPERS of</a></li>
+                    <li class="menu-item mr-2"><a href="#">WALLPAPERS</a></li>
                     <li class="menu-item mr-2"><a href="#">#ANIME</a></li>
                 </ul>
             </div>
             <ul class="nav-networks flex-center">
-                <li class="networks-item icon-youtube mr-1"><img src="svg/icon-youtube.svg" onload="SVGInject(this)" /></li>
-                <li class="networks-item icon-facebook mr-1"><img src="svg/icon-facebook.svg" onload="SVGInject(this)" /></li>
-                <li class="networks-item icon-twitter mr-1"><img src="svg/icon-twitter.svg" onload="SVGInject(this)" /></li>
+                <li class="networks-item icon-youtube "><img src="svg/icon-youtube.svg" onload="SVGInject(this)" /></li>
+                <li class="networks-item icon-facebook "><img src="svg/icon-facebook.svg" onload="SVGInject(this)" /></li>
+                <li class="networks-item icon-twitter "><img src="svg/icon-twitter.svg" onload="SVGInject(this)" /></li>
             </ul>
         </nav>
     </header>
-    <main class="main container hidden">
-        <div class="bg-main"><img src="img/bg-main.jpg" alt=""></div>
+    <main class="main container">
+
+        <!-- <div class="bg-main"><img src="img/bg-main.jpg" alt=""></div> -->
+        <div class="bg-main relative">
+            <video class="video" autoplay loop muted>
+                <source src="video/bg-video.mp4" type="video/mp4">
+            </video>
+        </div>
+        
         <section class="hero flex-center flex-column">
             <div class="logo-hero align-self-start"><img src="img/logo-hero.png" alt=""></div>
             <h2 class="white-normal">Demon Slayer movie will be shown in Brazil</h2>
@@ -51,7 +58,24 @@
             </div>
             <div class="icon-netflix align-self-start mt-2"><img src="svg/icon-netflix.svg" onload="SVGInject(this)" /></div>
         </section>
-        <div><img src="img/tanjiro.png" alt="Tanjiro"></div>
+        <div class="character-hero ">
+            <div class="js-tilt character-1"><img src="img/tanjiro.png" alt="Tanjiro"></div>
+            <div class="js-tilt character-2"><img src="img/giyo.png" alt="Tanjiro"></div>
+            <div class="js-tilt character-3"><img src="img/inosuke.png" alt="Tanjiro"></div>
+        </div>
+        
     </main>
+
+    <!-- //jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- //Tilt.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            perspective:2000,
+            scale : 1.05
+        });
+    </script>
 </body>
 </html>

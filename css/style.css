@@ -167,14 +167,64 @@
   overflow: hidden;
   z-index: -999;
 }
+.bg-main::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: linear-gradient(306.48deg, #020000 22.12%, #020000 22.13%, rgba(38, 4, 4, 0.72) 50.78%, #020000 80.19%);
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: -250px;
+}
 
 .main {
-  padding: 36px 24px;
+  height: 80%;
+  padding: 0px 24px 36px 24px;
+  overflow: hidden;
 }
 
 .logo-hero {
   max-width: 320px;
   transform: translate(5%, 20%);
+}
+
+.character-hero {
+  position: relative;
+  width: 100%;
+  transform: translate(-13%, 6%);
+}
+
+.character-2 {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  width: 110%;
+}
+
+.character-3 {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 115%;
+}
+
+.character-1 {
+  animation: character-opacity-1 20s ease infinite alternate both;
+}
+
+.character-2 {
+  animation: character-opacity-2 20s ease infinite alternate both;
+}
+
+.character-3 {
+  animation: character-opacity-3 20s ease infinite alternate both;
 }
 
 h1 {
@@ -300,7 +350,7 @@ a {
 .nav-menu .menu-item a {
   position: relative;
   color: #F7ECEC;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 .nav-menu .menu-item a::after {
   content: "";
@@ -312,7 +362,7 @@ a {
   background: linear-gradient(90.01deg, rgba(206, 24, 32, 0) -0.95%, #E01A23 31.91%, rgba(202, 24, 31, 0) 118.1%);
   filter: drop-shadow(0px 0px 2px #E91B24);
   transform: matrix(0.97, 0.26, 0.39, 0.92, 0, 0);
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 .nav-menu .menu-item a::before {
   content: "";
@@ -324,7 +374,7 @@ a {
   background: linear-gradient(90.01deg, rgba(206, 24, 32, 0) -0.95%, #E01A23 31.91%, rgba(202, 24, 31, 0) 118.1%);
   filter: drop-shadow(0px 0px 2px #E91B24);
   transform: matrix(0.99, -0.14, 0.72, 0.7, 0, 0);
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   transition-delay: 0.1s;
 }
 .nav-menu .menu-item a:hover {
@@ -752,11 +802,12 @@ li {
 }
 
 .networks-item {
-  width: 40px;
-  height: 40px;
-  padding: 0.5rem;
+  width: 48px;
+  height: 48px;
+  padding: 0.675rem;
   color: transparent;
   transition: all 0.5s ease;
+  z-index: 1;
 }
 .networks-item svg path {
   fill-opacity: 1;
@@ -777,4 +828,56 @@ li {
 }
 .icon-netflix:hover {
   transform: scale(1.03) translateX(-10%) translateY(-1px);
+}
+
+@keyframes character-opacity-1 {
+  0%, 30% {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+  }
+  40%, 65% {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+  75%, 100% {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@keyframes character-opacity-2 {
+  0%, 30% {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+  40%, 65% {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+  }
+  75%, 100% {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@keyframes character-opacity-3 {
+  0%, 30% {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+  40%, 65% {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+  75%, 100% {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+  }
 }/*# sourceMappingURL=style.css.map */

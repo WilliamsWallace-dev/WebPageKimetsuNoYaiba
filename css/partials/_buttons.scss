@@ -12,7 +12,7 @@ a{
         a{
             position: relative;
             color: #F7ECEC ;
-            transition: .3s ease;
+            transition: .5s ease;
             &::after{
                 content: "";
 
@@ -27,7 +27,7 @@ a{
                 filter: drop-shadow(0px 0px 2px #E91B24);
                 transform: matrix(0.97, 0.26, 0.39, 0.92, 0, 0);
 
-                transition: .3s ease;
+                transition: .5s ease;
             }
             &::before{
                 content: "";
@@ -42,7 +42,7 @@ a{
                 filter: drop-shadow(0px 0px 2px #E91B24);
                 transform: matrix(0.99, -0.14, 0.72, 0.7, 0, 0);
 
-                transition: .3s ease;
+                transition: .5s ease;
                 transition-delay: .1s;
             }
 
