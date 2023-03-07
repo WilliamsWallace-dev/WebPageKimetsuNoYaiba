@@ -33,4 +33,10 @@
     &:hover{
         transform: scale(1.03) translateX(-10%) translateY(-1px);
     }
+
+    @include responsive (s){
+        align-self: center;
+        max-width: 160px ;
+        margin: 16px 0 8px 0;
+    }
 }

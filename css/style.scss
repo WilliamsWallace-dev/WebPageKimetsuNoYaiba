@@ -20,10 +20,12 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-
   scroll-behavior: smooth;
+  background: linear-gradient(306.48deg, #020000 22.12%, #020000 22.13%, #020000 80.19%);
 
-  background-color: $white-dark;
+  @include responsive (s){
+    overflow: hidden;
+  }
 }
 
 // Para deixar imagens e SVGs fluidos

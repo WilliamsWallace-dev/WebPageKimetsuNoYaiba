@@ -16,17 +16,17 @@
     <script src="js/svg-inject.min.js"></script>
 </head>
 <body class="">
-    <header class="header">
+    <header class="header hidden">
         <nav class="navbar-desktop">
-            <div class="flex-center">
+            <div class="nav-link flex-center">
                 <div class="logo mr-4">
                     <img src="svg/logo.svg" onload="SVGInject(this)" />
                 </div>
                 <ul class="nav-menu flex-center ">
-                    <li class="menu-item mr-2"><a href="#">HOME</a></li>
-                    <li class="menu-item mr-2"><a href="#">STORY</a></li>
-                    <li class="menu-item mr-2"><a href="#">WALLPAPERS</a></li>
-                    <li class="menu-item mr-2"><a href="#">#ANIME</a></li>
+                    <li class="menu-item mr-3"><a href="#">HOME</a></li>
+                    <li class="menu-item mr-3"><a href="#">STORY</a></li>
+                    <li class="menu-item mr-3"><a href="#">WALLPAPERS</a></li>
+                    <li class="menu-item mr-3"><a href="#">#ANIME</a></li>
                 </ul>
             </div>
             <ul class="nav-networks flex-center">
@@ -36,9 +36,13 @@
             </ul>
         </nav>
     </header>
-    <main class="main container">
+    
+    <main class="main container ">
 
-        <!-- <div class="bg-main"><img src="img/bg-main.jpg" alt=""></div> -->
+        <section class="loading">
+            <div class="logo-loading"><img src="svg/logo-loading.svg" onload="SVGInject(this)" /></div>
+        </section>
+
         <div class="bg-main relative">
             <video class="video" autoplay loop muted>
                 <source src="video/bg-video.mp4" type="video/mp4">
@@ -47,25 +51,30 @@
         
         <section class="hero flex-center flex-column">
             <div class="logo-hero align-self-start"><img src="img/logo-hero.png" alt=""></div>
-            <h2 class="white-normal">Demon Slayer movie will be shown in Brazil</h2>
-            <p class="white-dark mt-1" style="opacity: 60%;">The 120-minute feature brings together episodes 
+            <div class="text-hero flex-center flex-column">
+                <h2 class="item-1 white-normal">Demon Slayer movie will be shown in Brazil</h2>
+                <p class="item-2 white-dark mt-1" style="opacity: 60%;">The 120-minute feature brings together episodes 
                 10 and 11 of Arco Distrito do Entretenimento (Season 2) and the first unpublished episode of 
                 Arco Vila dos Ferreiros. Demon Slayer Part 3 officially premieres in April 2023.
-            </p>
-            <div class="buttons align-self-start mt-3">
-                <a href="" class="btn-1 mr-3">PRE-ORDER NOW</a>
-                <a href="" class="btn-2">watch the trailer</a>
+                </p>
+                <div class="item-3 buttons align-self-start mt-3">
+                    <a href="#" class="btn-1 mr-3">PRE-ORDER NOW</a>
+                    <a href="#" class="btn-2">watch the trailer</a>
+                </div>
+                <!-- <div class="item-4"> -->
+                    <div class="icon-netflix desktop-tablet align-self-start mt-2"><img  src="svg/icon-netflix.svg" onload="SVGInject(this)" /></div>
+                <!-- </div> -->
             </div>
-            <div class="icon-netflix align-self-start mt-2"><img src="svg/icon-netflix.svg" onload="SVGInject(this)" /></div>
         </section>
-        <div class="character-hero ">
+        <div class="character-hero">
             <div class="js-tilt character-1"><img src="img/tanjiro.png" alt="Tanjiro"></div>
             <div class="js-tilt character-2"><img src="img/giyo.png" alt="Tanjiro"></div>
             <div class="js-tilt character-3"><img src="img/inosuke.png" alt="Tanjiro"></div>
         </div>
         
     </main>
-
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- //jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -77,5 +86,7 @@
             scale : 1.05
         });
     </script>
+    <!-- //app.js  -->
+    <script src="js/app.js"></script>
 </body>
 </html>

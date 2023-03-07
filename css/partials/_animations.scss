@@ -1,16 +1,81 @@
+//Logo-loading
 
+@keyframes logo-loading {
+  0%{
+    fill-opacity: 0;
+    stroke-width: 1 ;
+    stroke-opacity: 1;
+    stroke-dasharray: 0 250;
+    stroke-dashoffset: 50;
+  }
+  70%{
+    fill-opacity: 0;
+    stroke-width: 1 ;
+    stroke-opacity: 1;
+    stroke-dasharray: 150 0;
+    stroke-dashoffset: 200;
+  }
+  90%,100%{
+    fill-opacity: 1;
+    stroke-width: 0 ;
+    stroke-opacity: 0;
+    stroke-dasharray: 150 25;
+    stroke-dashoffset: 200;
+  }
+
+}
+
+
+@keyframes logo-stroke {
+  0%{
+    stroke-width: 0;
+  }
+  40%{
+    stroke-width: 1 ;
+  }
+  100%{
+    stroke-width: 5 ;
+  }
+
+}
+
+@keyframes logo-loading-shadow {
+  0%,20%{
+    filter: drop-shadow(0px 4px 80px rgba(247, 247, 247, 0)) 
+    drop-shadow(0px 4px 20px rgba(209, 4, 12, 0));
+  }
+  40%,50%{
+    filter: drop-shadow(0px 4px 50px rgba(247, 247, 247, 0.32)) 
+    drop-shadow(0px 4px 20px rgba(209, 4, 12, 0.24));
+  }
+  70%{
+    filter: drop-shadow(0px 4px 80px rgba(247, 247, 247, 0)) 
+    drop-shadow(0px 4px 20px rgba(209, 4, 12, 0));
+  }
+  100%{
+    filter: drop-shadow(0px 4px 80px rgba(247, 247, 247, 0.5)) 
+    drop-shadow(0px 4px 20px rgba(209, 4, 12, 0.32))
+    drop-shadow(0px 0px 2px #D1040C);
+    }
+
+}
+
+
+
+
+//Character
 @keyframes character-opacity-1 {
     0%,30%{
         display: flex;
         opacity: 1;
         pointer-events: all;
     }
-    40%,65%{
+    35%,65%{
         display: none;
         opacity: 0;
         pointer-events: none;
     }
-    75%,100%{
+    70%,100%{
         display: none;
         opacity: 0;
         pointer-events: none;
@@ -23,12 +88,12 @@
         opacity: 0;
         pointer-events: none;
     }
-    40%,65%{
+    35%,65%{
         display: flex;
         opacity: 1;
         pointer-events: all;
     }
-    75%,100%{
+    70%,100%{
         display: none;
         opacity: 0;
         pointer-events: none;
@@ -41,12 +106,12 @@
         opacity: 0;
         pointer-events: none;
     }
-    40%,65%{
+    35%,65%{
         display: none;
         opacity: 0;
         pointer-events: none;
     }
-    75%,100%{
+    70%,100%{
         display: flex;
         opacity: 1;
         pointer-events: all;
