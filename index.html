@@ -16,7 +16,7 @@
     <script src="js/svg-inject.min.js"></script>
 </head>
 <body class="">
-    <header class="header hidden">
+    <header class="header">
         <nav class="navbar-desktop">
             <div class="nav-link flex-center">
                 <div class="logo mr-4">
@@ -34,6 +34,28 @@
                 <li class="networks-item icon-facebook "><img src="svg/icon-facebook.svg" onload="SVGInject(this)" /></li>
                 <li class="networks-item icon-twitter "><img src="svg/icon-twitter.svg" onload="SVGInject(this)" /></li>
             </ul>
+        </nav>
+
+
+        <nav class="navbar-mobile">
+            <div class="logo">
+                <img src="svg/logo.svg" onload="SVGInject(this)" />
+            </div>
+                <!-- <ul class="nav-menu flex-center ">
+                    <li class="menu-item mr-3"><a href="#">HOME</a></li>
+                    <li class="menu-item mr-3"><a href="#">STORY</a></li>
+                    <li class="menu-item mr-3"><a href="#">WALLPAPERS</a></li>
+                    <li class="menu-item mr-3"><a href="#">#ANIME</a></li>
+                </ul> -->
+            <div class="menu-bg">
+                <div class="icon-menu-bg"></div>
+                <ul class="nav-menu ">
+                    <li class="menu-item mr-3"><a href="#">HOME</a></li>
+                    <li class="menu-item mr-3"><a href="#">STORY</a></li>
+                    <li class="menu-item mr-3"><a href="#">WALLPAPERS</a></li>
+                    <li class="menu-item mr-3"><a href="#">#ANIME</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     
@@ -66,11 +88,14 @@
                 <!-- </div> -->
             </div>
         </section>
+        
         <div class="character-hero">
             <div class="js-tilt character-1"><img src="img/tanjiro.png" alt="Tanjiro"></div>
             <div class="js-tilt character-2"><img src="img/giyo.png" alt="Tanjiro"></div>
             <div class="js-tilt character-3"><img src="img/inosuke.png" alt="Tanjiro"></div>
         </div>
+
+        
         
     </main>
     <!-- GSAP -->

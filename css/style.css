@@ -38,16 +38,21 @@
 .navbar-desktop {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 24px 24px;
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 960px) {
+  .navbar-desktop {
+    display: none;
+  }
 }
 
 .navbar-mobile {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,6 +199,75 @@
   }
 }
 
+.menu-bg {
+  position: relative;
+}
+.menu-bg .icon-menu-bg {
+  position: relative;
+  width: 32px;
+  transition: 0.7s ease;
+}
+.menu-bg .icon-menu-bg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 32px;
+  height: 4px;
+  background-color: #EDDDDD;
+  border-radius: 4px;
+  transition: 0.7s ease;
+}
+.menu-bg .icon-menu-bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  width: 32px;
+  height: 4px;
+  background-color: #EDDDDD;
+  border-radius: 4px;
+  transition: 0.7s ease;
+}
+.menu-bg .icon-menu-bg-active::after {
+  transform: translateY(-4px) rotate(405deg);
+}
+.menu-bg .icon-menu-bg-active::before {
+  transform: translateY(4px) rotate(-405deg);
+}
+@media screen and (max-width: 960px) {
+  .menu-bg .nav-menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    height: 0;
+    overflow: hidden;
+    text-align: right;
+    padding: 0px;
+    margin-top: 8px;
+    z-index: 99;
+    background: rgba(38, 4, 4, 0.64);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-radius: 16px;
+    transition: 0.5s ease;
+  }
+  .menu-bg .nav-menu a {
+    display: block;
+    padding: 4px 0;
+  }
+}
+.menu-bg .nav-menu-active {
+  display: block;
+  opacity: 1;
+  padding: 8px;
+  height: 125px;
+  overflow: auto;
+}
+
 @media screen and (max-width: 960px) {
   .hero h2, .hero p {
     text-align: center;
@@ -249,6 +323,7 @@
 }
 @media screen and (max-width: 960px) {
   .logo-hero {
+    width: 65%;
     transform: translate(0%, 0%);
     display: block;
     margin: 0 auto;
@@ -293,7 +368,7 @@
 @media screen and (max-width: 960px) {
   .character-2 {
     left: -20px;
-    top: 0px;
+    top: -30px;
   }
 }
 
@@ -311,15 +386,21 @@
 }
 
 .character-1 {
-  animation: character-opacity-1 20s ease infinite alternate both;
+  animation: character-opacity-1 25s ease infinite alternate both;
 }
 
 .character-2 {
-  animation: character-opacity-2 20s ease infinite alternate both;
+  animation: character-opacity-2 25s ease infinite alternate both;
 }
 
 .character-3 {
-  animation: character-opacity-3 20s ease infinite alternate both;
+  animation: character-opacity-3 25s ease infinite alternate both;
+}
+
+@media screen and (max-width: 960px) {
+  .logo {
+    width: 12%;
+  }
 }
 
 .loading {
@@ -338,6 +419,11 @@
 
 .logo-loading {
   width: 196px;
+}
+@media screen and (max-width: 960px) {
+  .logo-loading {
+    width: 30%;
+  }
 }
 .logo-loading svg {
   filter: drop-shadow(0px 4px 80px rgba(247, 247, 247, 0.64)) drop-shadow(0px 4px 32px rgba(0, 0, 0, 0.9));
@@ -502,6 +588,11 @@ a {
   transform: matrix(0.97, 0.26, 0.39, 0.92, 0, 0);
   transition: 0.5s ease;
 }
+@media screen and (max-width: 960px) {
+  .nav-menu .menu-item a::after {
+    left: 10px;
+  }
+}
 .nav-menu .menu-item a::before {
   content: "";
   position: absolute;
@@ -514,6 +605,11 @@ a {
   transform: matrix(0.99, -0.14, 0.72, 0.7, 0, 0);
   transition: 0.5s ease;
   transition-delay: 0.1s;
+}
+@media screen and (max-width: 960px) {
+  .nav-menu .menu-item a::before {
+    left: 8px;
+  }
 }
 .nav-menu .menu-item a:hover {
   transform: scale(1.02) translateY(-1px);
@@ -1066,14 +1162,14 @@ li {
 }
 @keyframes character-opacity-1 {
   0%, 30% {
-    display: flex;
-    opacity: 1;
-    pointer-events: all;
-  }
-  35%, 65% {
     display: none;
     opacity: 0;
     pointer-events: none;
+  }
+  35%, 65% {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
   }
   70%, 100% {
     display: none;
@@ -1083,14 +1179,14 @@ li {
 }
 @keyframes character-opacity-2 {
   0%, 30% {
-    display: none;
-    opacity: 0;
-    pointer-events: none;
-  }
-  35%, 65% {
     display: flex;
     opacity: 1;
     pointer-events: all;
+  }
+  35%, 65% {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
   70%, 100% {
     display: none;

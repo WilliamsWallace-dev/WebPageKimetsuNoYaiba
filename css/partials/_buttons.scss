@@ -18,6 +18,9 @@ a{
 
                 position: absolute;
                 left: -8px;
+                @include responsive(s){
+                    left: 10px;
+                }
                 top: 50%;
 
                 width: 0%;
@@ -33,6 +36,9 @@ a{
                 content: "";
                 position: absolute;
                 left: 0;
+                @include responsive(s){
+                    left: 8px;
+                }
                 top: 50%;
 
                 width: 0%;
