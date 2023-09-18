@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded',() => {
     
  let tl = new TimelineMax();
 
- tl.fromTo('.loading', 1 ,
+ tl.fromTo('.loading', 2 ,
  {
     width: '100%',
     opacity : 1
